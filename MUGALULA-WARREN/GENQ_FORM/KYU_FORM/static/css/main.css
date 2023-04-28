@@ -1,0 +1,22 @@
+.regdiv {
+  margin: 0 auto;
+  width: 50%;
+}
+h1 {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+h2 {
+  margin-top: 20px;
+  text-align: left;
+}
+input {
+  border-width: 3px;
+  padding-top: 4px;
+  padding: 5px;
+}
+hr{
+  border-width: 3px;
+}

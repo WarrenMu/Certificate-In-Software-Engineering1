@@ -12,21 +12,23 @@
     </head>
     <body>
         <h1>GENQ KYC</h1>
-        <h2>Bio Data</h2>
         <form action="{% url 'registration' %}" id="reg_form" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
+            {{ form.as_p }}
             <div class="regdiv">
+                <h2>Bio Data</h2><hr>
                 <input placeholder="FirstName" name="FirstName" type="text"
                 required>
                 
                 <input placeholder="LastName" name="LastName" type="text"
                 required>
                 <br>
+
                 <input placeholder="Date of Birth (DD/MM/YYYY)" name="date_of_birth" type="date" required> 
                 
                 <input placeholder="Gender" name="GenderName" type="gender" required>
                 <br>
-                <h2> Location</h2>
+                <h2> Location</h2><hr>
                 <input placeholder="country" name="country" type="country" required> 
                
                 <input placeholder="State / District" name="country" type="country" required> 
@@ -35,7 +37,7 @@
 
                 <input placeholder="Zip Code" name="country" type="Code" required> 
                 <br> 
-                <h2>Contacts and Address</h2>
+                <h2>Contacts and Address</h2><hr>
                 <input placeholder="Phone Number 1" name="PhoneNumber1" type="phone2numeric" required> 
              
                 <input placeholder="Phone Number 2" name="PhoneNumber2" type="phone2numeric" required> 
