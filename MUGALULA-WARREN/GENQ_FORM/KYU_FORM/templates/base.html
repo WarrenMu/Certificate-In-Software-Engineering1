@@ -14,7 +14,7 @@
         <h1>GENQ KYC</h1>
         <form action="{% url 'registration' %}" id="reg_form" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ form.as_p }}
+            
             <div class="regdiv">
                 <h2>Bio Data</h2><hr>
                 <input placeholder="FirstName" name="FirstName" type="text"
@@ -44,7 +44,7 @@
                 <br> 
                 <input placeholder="Email" name="Email" type="Email" required> 
                 <br> 
-                <input class="butt" type="submit" title="SUBMIT"> 
+                <input  class="butt" type="submit" title="SUBMIT"> 
                 
             </div>
         </form>
