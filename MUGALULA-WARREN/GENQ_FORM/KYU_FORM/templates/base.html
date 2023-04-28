@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <script src="{% static 'js/main.js' %}"></script>
+        
+    </head>
+    <body>
+        <h1>GENQ KYC</h1>
+        <h2>Bio Data</h2>
+        <form action="{% url 'registration' %}" id="reg_form" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="regdiv">
+                <input placeholder="FirstName" name="FirstName" type="text"
+                required>
+                
+                <input placeholder="LastName" name="LastName" type="text"
+                required>
+                <br>
+                <input placeholder="Date of Birth (DD/MM/YYYY)" name="date_of_birth" type="date" required> 
+                
+                <input placeholder="Gender" name="GenderName" type="gender" required>
+                <br>
+                <h2> Location</h2>
+                <input placeholder="country" name="country" type="country" required> 
+               
+                <input placeholder="State / District" name="country" type="country" required> 
+                <br> 
+                <input placeholder="Town" name="country" type="State" required> 
+
+                <input placeholder="Zip Code" name="country" type="Code" required> 
+                <br> 
+                <h2>Contacts and Address</h2>
+                <input placeholder="Phone Number 1" name="PhoneNumber1" type="phone2numeric" required> 
+             
+                <input placeholder="Phone Number 2" name="PhoneNumber2" type="phone2numeric" required> 
+                <br> 
+                <input placeholder="Email" name="Email" type="Email" required> 
+                <br> 
+                <input type="submit" class="submit_button" title="SUBMIT" id="submitbtn"> 
+                
+            </div>
+        </form>
+     
+    </body>
+</html>

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% comment %} {% block content %}
+
+
+    <h1>GENQ KYC</h1>
+    <form action="{% url 'registration' %}" id="reg_form" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="regdiv">
+
+            <select name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <br>
+            <input placeholder="FirstName" name="FirstName" type="text"
+            required>
+            <br>
+            <input placeholder="LastName" name="LastName" type="text"
+            required>
+            <br>
+            <input placeholder="Date of Birth (DD/MM/YYYY)" name="date_of_birth" type="date" required> 
+            <br>
+            <input placeholder="Gender" name="GenderName" type="gender" required>
+            <br>
+            <input placeholder="country" name="country" type="country" required> 
+            <br> 
+            <input placeholder="State / District" name="country" type="country" required> 
+            <br> 
+            <input placeholder="Town" name="country" type="State" required> 
+            <br> 
+            <input placeholder="Zip Code" name="country" type="Code" required> 
+            <br> 
+            <input placeholder="Phone Number 1" name="PhoneNumber1" type="phone2numeric" required> 
+            <br> 
+            <input placeholder="Phone Number 2" name="PhoneNumber2" type="phone2numeric" required> 
+            <br> 
+            <input placeholder="Email" name="Email" type="Email" required> 
+            <br> 
+            <input type="submit" class="submit_button" title="SUBMIT" id="submitbtn"> 
+            
+        </div>
+    </form>
+{% endblock %} {% endcomment %}
